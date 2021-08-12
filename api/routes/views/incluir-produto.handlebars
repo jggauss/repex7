@@ -1,0 +1,78 @@
+	<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Jubileu Respresentação Comercial</title>
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+	<header>
+	<div class="caixa">
+		<h1><img src="./logo.png"></h1>
+		<h1 class="titulo-principal">Repex - Representante Expresso</h1>
+			<nav class="menu-principal">
+				<ul>
+					<li><a href="index">Home</a></li>
+					<li><a href="clientes">Incluir produto</a></li>
+				</ul>
+			</nav>
+	</div>
+	</header>
+
+	<main>
+		<h2>Produtos</h2>
+		<section class="incluir-produto">
+		<h2 class="subtitulo">Incluir Produto</h2>
+		<form id="form-incluir-produto">
+			<div class="novo-cadastro">
+				<label for="sku-produto">SKU do produto</label>
+				<input id="sku-produto" name="sku-produto" placeholder="Sku-produto" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="nome-produto">Nome do produto</label>
+				<input id="nome-produto" name="nome-produto" placeholder="Nome do produto" class="campo" required>
+			</div>
+
+			<div class="novo-cadastro">
+				<label for="valor">Preço</label>
+				<input id="valor" name="valor" onkeyup="formatarMoeda()" placeholder="Digite o preço do produto" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="industria-produto">Industria</label>
+				<input id="industria-produto" name="industria-produto" placeholder="Digite a industria do produto" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="peso-produto">Peso bruto</label>
+				<input id="peso-produto" name="peso-produto" placeholder="Digite o peso do produto embalado" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="altura-produto">Altura</label>
+				<input id="altura-produto" name="altura-produto" placeholder="Digite altura do produto embalado" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="largura-produto">Largura</label>
+				<input id="largura-produto" name="largura-produto" placeholder="Digite a largura do produto embalado" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="comprimento-produto">Comprimento</label>
+				<input id="comprimento-produto" name="comprimento-produto" placeholder="Digite o comprimento do produto embalado" class="campo" required>
+			</div>
+			<button id="adicionar-cliente" class="botão-adicionar">Incluir</button>
+
+	</main>
+
+	<footer>
+		<img src="./logo.png">	
+		<p class="copyright">&copy; Copyright Jubileu Alimentos</p>
+	</footer>
+
+
+	"></script>
+	
+</body>
+</html>

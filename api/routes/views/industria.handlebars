@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Jubileu Respresentação Comercial</title>
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+	<header>
+	<div class="caixa">
+		<h1><img src="./logo.png"></h1>
+			<h1 class="titulo-principal">Repex - Representante Expresso</h1>
+			<nav class="menu-principal">
+				<ul>
+					<li><a href="index">Home</a></li>
+					<li><a href="incluir-industria">Incluir industria</a></li>
+					
+				</ul>
+			</nav>
+	</div>
+	</header>
+					<h1>Listagem de industrias</h1>
+					{{#each OBJETOLISTARINDUSTRIA}}
+						<tr class="industria">
+
+							<td>{{id}}</td>
+
+							<td>{{razao_social}}</td>
+							<hr></hr>
+
+
+						</tr>
+					{{/each}}
+
+
+
+	<main>
+		<h2>Industria</h2>
+	</main>
+
+	<footer>
+		<img src="./logo.png">	
+		<p class="copyright">&copy; Copyright Jubileu Alimentos</p>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Jubileu Respresentação Comercial</title>
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+	<header>
+		<div class="caixa">
+		<img src="./logo.png">
+		<h1 class="titulo-principal">Repex - Representante Expresso</h1>
+			<nav class="menu-principal">
+				<ul>
+					<li><a href="index">Home</a></li>
+					<li><a href="incluir-cliente">Incluir Cliente</a></li>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+	<h2>Clientes</h2>
+	<section class="incluir-cliente">
+		<h2 class="subtitulo">Incluir Cliente</h2>
+		<form action = "/listar_clientes" method="POST" id="form-incluir-cliente">
+			<div class="novo-cadastro">
+				<label for="id">CNPJ</label>
+				<input  type="text"  id="cnpj" onkeyup="mascaraCnpj('##.###.###/####-##',this)" name="id" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" placeholder="##.###.###/####-##" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="ie">Inscrição Estadual</label>
+				<input type="text" id="ie"  name="ie" placeholder="Digite a Inscrição Estadual com apenas os números sem pontos e traços" class="campo">
+			</div>
+
+			<div class="novo-cadastro">
+				<label for="razao_social">Razão Social</label>
+				<input type="text" id="razao_social" name="razao_social" placeholder="Digite a Razão Social do cliente" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="nome_fantasia">Nome Fantasia</label>
+				<input type="text" id="nome_fantasia" name="nome_fantasia" placeholder="Digite o nome fantasia do cliente" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="cep">CEP</label>
+				<input type="text" maxlength="9" id="cep" name="cep" placeholder="Digite o CEP, Ex: 30599-580" class="campo" pattern="[\d]{5}-?[\d]{3}" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="logradouro">Logradouro</label>
+				<input type="text" id="logradouro" name="logradouro" placeholder="Digite rua ou avenida" class="campo" required>
+			</div>
+			
+			<div class="novo-cadastro">
+				<label for="numero">Número</label>
+				<input type="text" id="numero" name="numero" placeholder="Digite o número" class="campo" required=>
+			</div>
+			<div class="novo-cadastro">
+				<label for="complemento">Complemento</label>
+				<input type="text" id="complemento" name="complemento" placeholder="Digite complento: apartamento, bloco, casa, etc" class="campo">
+			</div>
+			<div class="novo-cadastro">
+				<label for="bairro">Bairro</label>
+				<input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="cidade">Cidade</label>
+				<input type="text" id="localidade" name="cidade" placeholder="Digite a cidade" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="uf">UF</label>
+				<input type="text" id="uf" name="uf" placeholder="Digite o estado" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="telefone1">Telefone</label>
+				<input type="tel" id="telefone1" onkeyup="mascaraTelefone('(##) #### ####',this)" name="telefone1" pattern="\(\d{2}\).\d{4,5}.\d{4,}" placeholder="(##) ####-####" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="telefone2">Telefone celular</label>
+				<input type="tel" id="telefone2" onkeyup="mascaraTelefone('(##) #### ####',this)" name="telefone2" pattern="\(\d{2}\).\d{4,5}.\d{4,}" placeholder="(##) #####-####" class="campo">
+			</div>
+			<div class="novo-cadastro">
+				<label for="email_contato">E-mail de contato</label>
+				<input type="email" id="email_contato" name="email_contato" placeholder="seuemail@dominio.com.br" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="email_xml">E-mail de contato</label>
+				<input type="email" id="email_xml" name="email_xml" placeholder="seuemail@dominio.com.br" class="campo" required>
+			</div>
+			<div class="novo-cadastro">
+				<label for="vendedor">Vendedor</label>
+				<input type="number" id="vendedor" name="vendedor" placeholder="Código do vendedor com 2 números" class="campo" required>
+			</div>
+			<button type="submit" id="adicionar" class="botão-adicionar">Incluir</button>
+
+
+
+		</form>
+	</section>		
+
+	</main>
+
+	<footer>
+		<img src="./logo.png">	
+		<p class="copyright">&copy; Copyright Jubileu Alimentos</p>
+	</footer>
+    
+	
+	<script src="/validacao.js"></script>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Jubileu Respresentação Comercial</title>
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+	<header>
+	<div class="caixa">
+		<img src="./logo.png">
+		<h1 class="titulo-principal">Repex - Representante Expresso</h1>
+			<nav class="menu-principal">
+				<ul>
+					<li><a href="index">Home</a></li>
+					<li><a href="mostrarUmCliente">Consultar Cliente</a></li>
+					<li><a href="tela-incluir-cliente">Incluir Cliente</a></li>
+				</ul>
+			</nav>
+	</div>
+	</header>
+			<div class="novo-cadastro">
+				<label for="cnpj">CNPJ</label>
+				<input type="text" id="cnpj" onkeyup="mascaraCnpj('##.###.###/####-##',this)" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" placeholder="##.###.###/####-##" class="campo" required>
+			</div>
+			<h1>Listagem de clientes</h1>
+					{{#each OBJETOLISTARCLIENTES}}
+						<tr class="cliente">
+
+							<td>{{id}}</td>
+
+							<td>{{razao_social}}</td>
+							<hr></hr>
+
+
+						</tr>
+					{{/each}}
+
+
+	<main>
+		<table class="tablecliente">
+			<tbody>
+	
+			</tbody>
+		</table>
+	</main>
+
+	<footer>
+		<img src="./logo.png">	
+		<p class="copyright"> &copy; Copyright Jubileu Alimentos </p>
+	</footer>
+		
+	<script src="/validacao.js"></script>
+	</body>
+	</html>
